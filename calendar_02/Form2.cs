@@ -48,10 +48,10 @@ namespace calendar_02
 		{
 			string rename = name.Substring(3);
 
-			Coffee a = new Coffee(textBox2.Text, (int)numericUpDown1.Value);
-			Study b = new Study(textBox4.Text, (int)numericUpDown3.Value);
-			Exercise c = new Exercise(textBox5.Text, (int)numericUpDown4.Value);
-			Meditation d = new Meditation(textBox3.Text, (int)numericUpDown2.Value);
+			Coffee a = new Coffee(null, (int)numericUpDown1.Value);
+			Study b = new Study(null, (int)numericUpDown3.Value);
+			Exercise c = new Exercise(null, (int)numericUpDown4.Value);
+			Meditation d = new Meditation(null, (int)numericUpDown2.Value);
 			Stress f = new Stress((int)numericUpDown5.Value);
 
 			day = new DayRecord(int.Parse(rename), a,c,b,d,f);
@@ -59,11 +59,11 @@ namespace calendar_02
 			if(day.Coffee.Count > 4)
 				MessageBox.Show("Too Much Coffee>0< \n 위에 구멍나 ㅠㅠ!");
 			if(day.Exercise.Count > 4)
-				MessageBox.Show("Too Much Exercise makes you oooold");
+				MessageBox.Show(" 썬크림은 발랐니...");
 			if (day.meditation.Count > 3) 
-				MessageBox.Show("Too Much~ Enjoy Outdoor Activities~~");
+				MessageBox.Show("그만 좀 나가 놀아보렴~~");
 			if (day.study.Count > 6 )
-				MessageBox.Show("Gooooood!");
+				MessageBox.Show("공부 잘~~~했어!Gooooood!");
 
 
 			//MonthRecord.Add(day);

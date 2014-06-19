@@ -4,36 +4,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 
 namespace calendar_02
-{
-	/*class MainClass
-	{
-		public static void Main(string[] args)
-		{
-			DayRecord day1 = new DayRecord(new Coffee("1", 10), new Exercise("2", 10), new Study("3", 1), new Meditation("3", 2), new Stress(10), 1);
-			DayRecord day2 = new DayRecord(new Coffee("1", 10), new Exercise("2", 10), new Study("3", 1), new Meditation("3", 2), new Stress(10), 2);
-			DayRecord day3 = new DayRecord(new Coffee("1", 10), new Exercise("2", 10), new Study("3", 1), new Meditation("3", 2), new Stress(10), 3);
-
-			MonthRecord month6 = new MonthRecord();
-			month6.Add(day1);
-			month6.Add(day2);
-			month6.Add(day3);
-			Stream ws = new FileStream("201406.dat", FileMode.Create);
-			BinaryFormatter serializer = new BinaryFormatter();
-			serializer.Serialize(ws, month6);
-			ws.Close();
-
-
-
-
-
-			FileStream rs = new FileStream("201406.dat", FileMode.Open);
-			BinaryFormatter deserializer = new BinaryFormatter();
-			month6 = (MonthRecord)deserializer.Deserialize(rs);
-			rs.Close();
-
-		}
-	}
-	*/
+{	
 	[Serializable]
 	public class MonthRecord
 	{

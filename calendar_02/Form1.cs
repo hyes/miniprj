@@ -15,7 +15,6 @@ namespace calendar_02
 		MonthRecord month6 = new MonthRecord();
 		public Form1()
 		{
-			//ArrayList labels = new ArrayLis
 			InitializeComponent();
 
 			labels[0] = day1;
@@ -124,10 +123,9 @@ namespace calendar_02
 				if (day.study.Count != 0 && day.study.Count < 3)
 				{
 					int rn1 = RandomNum1();
-					//	Thread.Sleep(10);
 					int rn2 = RandomNum1();
 					int n3 = day.study.Count;
-					Image img_study = Image.FromFile(@"C:\Users\hyes\documents\visual studio 2010\Projects\calendar_02\calendar_02\Resources\pen.jpg");
+					Image img_study = Image.FromFile(@"C:\Users\hyes\documents\visual studio 2010\Projects\calendar_02\calendar_02\Resources\study1.jpg");
 					label.Image = bmp;
 					Rectangle tem3 = new Rectangle(rn1, rn2, 20 * n3, 20 * n3);
 					g.DrawImage(img_study, tem3);
@@ -136,10 +134,9 @@ namespace calendar_02
 				else if (day.study.Count >= 3 && day.study.Count <= 6)
 				{
 					int rn1 = RandomNum1();
-					//	Thread.Sleep(10);
 					int rn2 = RandomNum1();
 					int n3 = day.study.Count;
-					Image img_study = Image.FromFile(@"C:\Users\hyes\documents\visual studio 2010\Projects\calendar_02\calendar_02\Resources\pen1.jpg");
+					Image img_study = Image.FromFile(@"C:\Users\hyes\Documents\Visual Studio 2010\Projects\calendar_02\calendar_02\Resources\study2.png");
 					label.Image = bmp;
 					Rectangle tem3 = new Rectangle(rn1, rn2, 15 * n3, 15 * n3);
 					g.DrawImage(img_study, tem3);
@@ -147,7 +144,7 @@ namespace calendar_02
 
 				else if (day.study.Count > 6)
 				{
-					Image img_study = Image.FromFile(@"C:\Users\hyes\documents\visual studio 2010\Projects\calendar_02\calendar_02\Resources\pen1.jpg");
+					Image img_study = Image.FromFile(@"C:\Users\hyes\documents\visual studio 2010\Projects\calendar_02\calendar_02\Resources\study2.png");
 					label.Image = bmp;
 					Rectangle tem3 = new Rectangle(5, 5, 90, 90);
 					g.DrawImage(img_study, tem3);
@@ -155,33 +152,30 @@ namespace calendar_02
 
 				if (day.Coffee.Count != 0 && day.Coffee.Count < 4)
 				{
-					Image img_cof = Image.FromFile(@"C:\Users\hyes\Documents\Visual Studio 2010\Projects\calendar_02\calendar_02\Resources\coffee.png");
+					Image img_cof = Image.FromFile(@"C:\Users\hyes\Documents\Visual Studio 2010\Projects\calendar_02\calendar_02\Resources\coffee1.png");
 					int rn1 = RandomNum();
-					//	Thread.Sleep(10);
 					int rn2 = RandomNum();
 					int n = day.Coffee.Count;
 					label.Image = bmp;
-					Rectangle tem = new Rectangle(rn1, rn2, n * 25, n * 25);
+					Rectangle tem = new Rectangle(rn1, rn2, n * 18, n * 15);
 					g.DrawImage(img_cof, tem);
 				}
 
 
 				else if (day.Coffee.Count >= 4)
 				{
-					Image img_cof = Image.FromFile(@"C:\Users\hyes\Documents\Visual Studio 2010\Projects\calendar_02\calendar_02\Resources\coffee.png");
+					Image img_cof = Image.FromFile(@"C:\Users\hyes\Documents\Visual Studio 2010\Projects\calendar_02\calendar_02\Resources\coffee1.png");
 					label.Image = bmp;
-					Rectangle tem = new Rectangle(0, 10, 80, 80);
+					Rectangle tem = new Rectangle(5, 12, 84, 70);
 					g.DrawImage(img_cof, tem);
-					//	MessageBox.Show("Too Much Coffee!!! Caution:위경련");
 				}
 
 				if (day.Exercise.Count != 0 && day.Exercise.Count < 3)
 				{
 					int rn1 = RandomNum();
-					//	Thread.Sleep(10);
 					int rn2 = RandomNum();
 					int n1 = day.Exercise.Count;
-					Image img_exer = Image.FromFile(@"C:\Users\hyes\Documents\Visual Studio 2010\Projects\calendar_02\calendar_02\Resources\tennis.png");
+					Image img_exer = Image.FromFile(@"C:\Users\hyes\Documents\Visual Studio 2010\Projects\calendar_02\calendar_02\Resources\tennis2.png");
 					label.Image = bmp;
 					Rectangle tem1 = new Rectangle(rn1, rn2, 25 * n1, 25 * n1);
 					g.DrawImage(img_exer, tem1);
@@ -190,7 +184,7 @@ namespace calendar_02
 				else if (day.Exercise.Count >= 3)
 				{
 					int n2 = day.Exercise.Count;
-					Image img_exer = Image.FromFile(@"C:\Users\hyes\Documents\Visual Studio 2010\Projects\calendar_02\calendar_02\Resources\tennis.png");
+					Image img_exer = Image.FromFile(@"C:\Users\hyes\Documents\Visual Studio 2010\Projects\calendar_02\calendar_02\Resources\tennis2.png");
 					label.Image = bmp;
 					Rectangle tem1 = new Rectangle(35, 10, 80, 80);
 					g.DrawImage(img_exer, tem1);
@@ -200,10 +194,9 @@ namespace calendar_02
 				if (day.meditation.Count != 0 && day.meditation.Count < 3)
 				{
 					int rn1 = RandomNum();
-					//		Thread.Sleep(10);
 					int rn2 = RandomNum();
 					int n2 = day.meditation.Count;
-					Image img_medi = Image.FromFile(@"C:\Users\hyes\Documents\Visual Studio 2010\Projects\calendar_02\calendar_02\Resources\meditation.png");
+					Image img_medi = Image.FromFile(@"C:\Users\hyes\Documents\Visual Studio 2010\Projects\calendar_02\calendar_02\Resources\meditation2.png");
 					label.Image = bmp;
 					Rectangle tem2 = new Rectangle(rn1, rn2, 15 * n2, 15 * n2);
 					g.DrawImage(img_medi, tem2);
@@ -211,7 +204,7 @@ namespace calendar_02
 
 				else if (day.meditation.Count >= 3)
 				{
-					Image img_medi = Image.FromFile(@"C:\Users\hyes\Documents\Visual Studio 2010\Projects\calendar_02\calendar_02\Resources\meditation.png");
+					Image img_medi = Image.FromFile(@"C:\Users\hyes\Documents\Visual Studio 2010\Projects\calendar_02\calendar_02\Resources\meditation2.png");
 					label.Image = bmp;
 					Rectangle tem2 = new Rectangle(20, 30, 80, 80);
 					g.DrawImage(img_medi, tem2);
@@ -221,13 +214,11 @@ namespace calendar_02
 				if (day.stress.Percent != 0)
 				{
 					int n4 = day.stress.Percent;
-					//double barlength = 1.12 * n4;
 					label.Image = bmp;
 					Pen redPen = new Pen(Color.Transparent, 0);
 					Color c2 = Color.FromArgb(n4, Color.Red);
 					SolidBrush fillRed = new SolidBrush(c2);
 					Rectangle stressbar = new Rectangle(0, 90, 112, 10);
-					//Rectangle stressbar = new Rectangle(0, 90, (int)barlength, 10);
 					g.DrawRectangle(redPen, stressbar);
 					g.FillRectangle(fillRed, stressbar);
 				}

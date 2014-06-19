@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Collections;
+using System.Drawing.Text;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace calendar_02
 {
@@ -17,6 +19,7 @@ namespace calendar_02
 		int totalexercise = 0;
 		int totalstudy = 0;
 		int totalmeditation = 0;
+		int totalstress = 0;
 
 
 		public Form3(MonthRecord month6)
@@ -24,7 +27,7 @@ namespace calendar_02
 			InitializeComponent();
 			this.month6 = month6;
 			TotalCount();
-			StringCount();
+			//StringCount();
 		}
 
 		public void TotalCount()
@@ -38,46 +41,46 @@ namespace calendar_02
 				this.totalexercise += day.Exercise.Count;
 				this.totalstudy += day.study.Count;
 				this.totalmeditation += day.meditation.Count;
+				this.totalstress += day.stress.Percent;
+
 			}
 
 			label5.Text = totalcoffee.ToString();
 			label6.Text = totalmeditation.ToString();
 			label7.Text = totalstudy.ToString();
 			label8.Text = totalexercise.ToString();
+	
 		}
 
-		public void StringCount()
+
+		private void button1_Click(object sender, EventArgs e)
 		{
-			int a = 0;
-			int b = 0;
-			int c = 0;
-			//	ArrayList stringcoffee = new ArrayList();
+			chart1.ChartAreas[0].AxisX.MajorGrid.LineWidth = 0;
+			chart1.ChartAreas[0].AxisY.MajorGrid.LineWidth = 0;
+			chart2.ChartAreas[0].AxisX.MajorGrid.LineWidth = 0;
+			chart2.ChartAreas[0].AxisY.MajorGrid.LineWidth = 0;
+			chart3.ChartAreas[0].AxisX.MajorGrid.LineWidth = 0;
+			chart3.ChartAreas[0].AxisY.MajorGrid.LineWidth = 0;
+			chart4.ChartAreas[0].AxisX.MajorGrid.LineWidth = 0;
+			chart4.ChartAreas[0].AxisY.MajorGrid.LineWidth = 0;
+			chart5.ChartAreas[0].AxisX.MajorGrid.LineWidth = 0;
+			chart5.ChartAreas[0].AxisY.MajorGrid.LineWidth = 0;
+		
+			Label temp2 = new Label();
+			label1.Text = "스트레스 정도 변화";
+
+				
 
 			foreach (DayRecord day in month6.monthly)
-			{
-
-
-				if (day.Coffee.Name.Contains("라테") || day.Coffee.Name.Contains("라떼"))
-				{
-					//int a = 0;
-					a += 1;
-					label1.Text ="라떼를" + a.ToString() + "잔 마셨네요~";
-					//label1.Text = + "   ";
-					
-				}
-				else if (day.Coffee.Name.Contains("아메리카노") || day.Coffee.Name.Contains("커피"))
-				{
-					//int b = 0;
-					b += 1;
-					label2.Text ="아메리카노는" + b.ToString() + "잔 마셨고,";
-					
-				}
-				else
-				{
-					int ddd = totalcoffee - c;
-				}
+			{	
+				chart2.Series["Stress"].Points.AddXY(day.DD, day.stress.Percent);
+				chart1.Series["Coffee"].Points.AddXY(day.DD, day.Coffee.Count);
+				chart4.Series["Meditation"].Points.AddXY(day.DD, day.meditation.Count);
+				chart5.Series["Exercise"].Points.AddXY(day.DD, day.Exercise.Count);
+				chart3.Series["Study"].Points.AddXY(day.DD, day.study.Count);
+			
 			}
-
 		}
+
 	}
 }

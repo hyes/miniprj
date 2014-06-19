@@ -60,13 +60,6 @@ namespace calendar_02.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap book {
-            get {
-                object obj = ResourceManager.GetObject("book", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
         internal static System.Drawing.Bitmap cal6 {
             get {
                 object obj = ResourceManager.GetObject("cal6", resourceCulture);
@@ -74,30 +67,58 @@ namespace calendar_02.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap coffee {
+        internal static System.Drawing.Bitmap coffee1 {
             get {
-                object obj = ResourceManager.GetObject("coffee", resourceCulture);
+                object obj = ResourceManager.GetObject("coffee1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
-        internal static System.Drawing.Bitmap meditation {
+        internal static System.Drawing.Bitmap meditation2 {
             get {
-                object obj = ResourceManager.GetObject("meditation", resourceCulture);
+                object obj = ResourceManager.GetObject("meditation2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
-        internal static System.Drawing.Bitmap pen {
+        internal static System.Drawing.Bitmap small_coffee {
             get {
-                object obj = ResourceManager.GetObject("pen", resourceCulture);
+                object obj = ResourceManager.GetObject("small_coffee", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
-        internal static System.Drawing.Bitmap pen1 {
+        internal static System.Drawing.Bitmap small_medita {
             get {
-                object obj = ResourceManager.GetObject("pen1", resourceCulture);
+                object obj = ResourceManager.GetObject("small_medita", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap small_study {
+            get {
+                object obj = ResourceManager.GetObject("small_study", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap small_tennis {
+            get {
+                object obj = ResourceManager.GetObject("small_tennis", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap study1 {
+            get {
+                object obj = ResourceManager.GetObject("study1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap study2 {
+            get {
+                object obj = ResourceManager.GetObject("study2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

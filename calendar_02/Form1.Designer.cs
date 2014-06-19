@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
 			this.day1 = new System.Windows.Forms.Label();
 			this.day2 = new System.Windows.Forms.Label();
 			this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
@@ -119,14 +120,14 @@
 			// 저장SToolStripMenuItem
 			// 
 			this.저장SToolStripMenuItem.Name = "저장SToolStripMenuItem";
-			this.저장SToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+			this.저장SToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.저장SToolStripMenuItem.Text = "저장(&S)";
 			this.저장SToolStripMenuItem.Click += new System.EventHandler(this.저장SToolStripMenuItem_Click);
 			// 
 			// 불러오기OToolStripMenuItem
 			// 
 			this.불러오기OToolStripMenuItem.Name = "불러오기OToolStripMenuItem";
-			this.불러오기OToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+			this.불러오기OToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.불러오기OToolStripMenuItem.Text = "불러오기(&O)";
 			this.불러오기OToolStripMenuItem.Click += new System.EventHandler(this.불러오기OToolStripMenuItem_Click);
 			// 
@@ -454,12 +455,16 @@
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(728, 17);
+			this.button1.BackColor = System.Drawing.Color.Crimson;
+			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button1.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+			this.button1.ForeColor = System.Drawing.Color.White;
+			this.button1.Location = new System.Drawing.Point(760, 22);
 			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 23);
+			this.button1.Size = new System.Drawing.Size(62, 48);
 			this.button1.TabIndex = 33;
-			this.button1.Text = "STAT!";
-			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Text = "통계";
+			this.button1.UseVisualStyleBackColor = false;
 			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// Form1
@@ -502,11 +507,12 @@
 			this.Controls.Add(this.day1);
 			this.Controls.Add(this.day2);
 			this.Controls.Add(this.menuStrip1);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MainMenuStrip = this.menuStrip1;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "Form1";
-			this.Text = "Form1";
+			this.Text = "다이어리";
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
 			this.ResumeLayout(false);
