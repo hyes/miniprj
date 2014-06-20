@@ -67,7 +67,8 @@ namespace calendar_02
 			chart5.ChartAreas[0].AxisY.MajorGrid.LineWidth = 0;
 		
 			Label temp2 = new Label();
-			label1.Text = "스트레스 정도 변화";
+			label1.Text = "Stress";
+			label1.Font = new Font("나눔고딕", 10);
 
 				
 
