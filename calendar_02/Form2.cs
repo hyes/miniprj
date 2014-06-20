@@ -12,10 +12,10 @@ namespace calendar_02
 	public partial class Form2 : Form
 	{
 		string name;
-		
+		Form1 frm1;
 		public DayRecord day;
 		public MonthRecord monthly;
-		Form1 frm1;
+	
 
 		public Form2(string name)
 		{
@@ -65,8 +65,6 @@ namespace calendar_02
 			if (day.study.Count > 6 )
 				MessageBox.Show("공부 잘~~~했어!Gooooood!");
 
-
-			//MonthRecord.Add(day);
 			this.DialogResult = DialogResult.OK;
 			this.Close();
 			

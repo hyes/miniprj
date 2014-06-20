@@ -27,7 +27,6 @@ namespace calendar_02
 			InitializeComponent();
 			this.month6 = month6;
 			TotalCount();
-			//StringCount();
 		}
 
 		public void TotalCount()
@@ -53,8 +52,23 @@ namespace calendar_02
 		}
 
 
+		public Bitmap[] smallimages = new Bitmap[]
+		        {
+				
+		            Properties.Resources.small_coffee,
+		            Properties.Resources.small_study,
+		            Properties.Resources.small_medita,
+		            Properties.Resources.small_tennis,
+					
+		        };
+
 		private void button1_Click(object sender, EventArgs e)
 		{
+			pictureBox5.Image = smallimages[0];
+			pictureBox6.Image = smallimages[2];
+			pictureBox7.Image = smallimages[1];
+			pictureBox8.Image = smallimages[3];
+			
 			chart1.ChartAreas[0].AxisX.MajorGrid.LineWidth = 0;
 			chart1.ChartAreas[0].AxisY.MajorGrid.LineWidth = 0;
 			chart2.ChartAreas[0].AxisX.MajorGrid.LineWidth = 0;
@@ -65,12 +79,11 @@ namespace calendar_02
 			chart4.ChartAreas[0].AxisY.MajorGrid.LineWidth = 0;
 			chart5.ChartAreas[0].AxisX.MajorGrid.LineWidth = 0;
 			chart5.ChartAreas[0].AxisY.MajorGrid.LineWidth = 0;
-		
+			
+			
 			Label temp2 = new Label();
 			label1.Text = "Stress";
 			label1.Font = new Font("나눔고딕", 10);
-
-				
 
 			foreach (DayRecord day in month6.monthly)
 			{	
@@ -79,7 +92,6 @@ namespace calendar_02
 				chart4.Series["Meditation"].Points.AddXY(day.DD, day.meditation.Count);
 				chart5.Series["Exercise"].Points.AddXY(day.DD, day.Exercise.Count);
 				chart3.Series["Study"].Points.AddXY(day.DD, day.study.Count);
-			
 			}
 		}
 

@@ -55,6 +55,10 @@
 			this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
 			this.chart5 = new System.Windows.Forms.DataVisualization.Charting.Chart();
 			this.label1 = new System.Windows.Forms.Label();
+			this.pictureBox5 = new System.Windows.Forms.PictureBox();
+			this.pictureBox6 = new System.Windows.Forms.PictureBox();
+			this.pictureBox7 = new System.Windows.Forms.PictureBox();
+			this.pictureBox8 = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -64,6 +68,10 @@
 			((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.chart5)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label5
@@ -126,8 +134,6 @@
 			series1.Color = System.Drawing.Color.PaleTurquoise;
 			series1.LabelBorderWidth = 4;
 			series1.LabelForeColor = System.Drawing.Color.Transparent;
-			series1.MarkerImage = "C:\\Users\\hyes\\Documents\\Visual Studio 2010\\Projects\\calendar_02\\calendar_02\\Resou" +
-				"rces\\small_coffee.png";
 			series1.MarkerImageTransparentColor = System.Drawing.Color.Transparent;
 			series1.MarkerSize = 1;
 			series1.MarkerStep = 30;
@@ -221,8 +227,6 @@
 			series3.ChartArea = "ChartArea1";
 			series3.Color = System.Drawing.Color.PaleGreen;
 			series3.LabelBorderWidth = 3;
-			series3.MarkerImage = "C:\\Users\\hyes\\Documents\\Visual Studio 2010\\Projects\\calendar_02\\calendar_02\\Resou" +
-				"rces\\small_study.png";
 			series3.MarkerSize = 1;
 			series3.MarkerStep = 31;
 			series3.Name = "Study";
@@ -243,8 +247,6 @@
 			this.chart4.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
 			series4.ChartArea = "ChartArea1";
 			series4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-			series4.MarkerImage = "C:\\Users\\hyes\\Documents\\Visual Studio 2010\\Projects\\calendar_02\\calendar_02\\Resou" +
-				"rces\\small_medita.png";
 			series4.MarkerSize = 1;
 			series4.MarkerStep = 31;
 			series4.Name = "Meditation";
@@ -265,8 +267,6 @@
 			this.chart5.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
 			series5.ChartArea = "ChartArea1";
 			series5.Color = System.Drawing.Color.Pink;
-			series5.MarkerImage = "C:\\Users\\hyes\\Documents\\Visual Studio 2010\\Projects\\calendar_02\\calendar_02\\Resou" +
-				"rces\\small_tennis.png";
 			series5.MarkerSize = 1;
 			series5.MarkerStep = 31;
 			series5.Name = "Exercise";
@@ -283,12 +283,56 @@
 			this.label1.Size = new System.Drawing.Size(0, 12);
 			this.label1.TabIndex = 21;
 			// 
+			// pictureBox5
+			// 
+			this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+			this.pictureBox5.Location = new System.Drawing.Point(48, 223);
+			this.pictureBox5.Name = "pictureBox5";
+			this.pictureBox5.Size = new System.Drawing.Size(31, 28);
+			this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pictureBox5.TabIndex = 22;
+			this.pictureBox5.TabStop = false;
+			// 
+			// pictureBox6
+			// 
+			this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+			this.pictureBox6.Location = new System.Drawing.Point(459, 221);
+			this.pictureBox6.Name = "pictureBox6";
+			this.pictureBox6.Size = new System.Drawing.Size(31, 28);
+			this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pictureBox6.TabIndex = 23;
+			this.pictureBox6.TabStop = false;
+			// 
+			// pictureBox7
+			// 
+			this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+			this.pictureBox7.Location = new System.Drawing.Point(52, 400);
+			this.pictureBox7.Name = "pictureBox7";
+			this.pictureBox7.Size = new System.Drawing.Size(31, 27);
+			this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pictureBox7.TabIndex = 24;
+			this.pictureBox7.TabStop = false;
+			// 
+			// pictureBox8
+			// 
+			this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
+			this.pictureBox8.Location = new System.Drawing.Point(459, 389);
+			this.pictureBox8.Name = "pictureBox8";
+			this.pictureBox8.Size = new System.Drawing.Size(41, 40);
+			this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pictureBox8.TabIndex = 25;
+			this.pictureBox8.TabStop = false;
+			// 
 			// Form3
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
 			this.ClientSize = new System.Drawing.Size(839, 654);
+			this.Controls.Add(this.pictureBox8);
+			this.Controls.Add(this.pictureBox7);
+			this.Controls.Add(this.pictureBox6);
+			this.Controls.Add(this.pictureBox5);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.chart5);
@@ -318,6 +362,10 @@
 			((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.chart5)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -341,6 +389,10 @@
 		private System.Windows.Forms.DataVisualization.Charting.Chart chart4;
 		private System.Windows.Forms.DataVisualization.Charting.Chart chart5;
 		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.PictureBox pictureBox5;
+		private System.Windows.Forms.PictureBox pictureBox6;
+		private System.Windows.Forms.PictureBox pictureBox7;
+		private System.Windows.Forms.PictureBox pictureBox8;
 
 	}
 }

@@ -47,8 +47,6 @@ namespace calendar_02
 			labels[27] = day28;
 			labels[28] = day29;
 			labels[29] = day30;
-			//labels[30] = day31;
-			
 
 		}
 
@@ -114,21 +112,29 @@ namespace calendar_02
 				return rn;
 			}
 		
-	
+			private Bitmap[] images = new Bitmap[]
+				{
+					Properties.Resources.coffee1,
+					Properties.Resources.meditation2,
+					Properties.Resources.study1,
+					Properties.Resources.study2,
+					Properties.Resources.tennis
+					
+				};
+				
 			public void DrawOnCalendar(DayRecord day, Label label)
 			{
 				Image bmp = new Bitmap(112, 96);
 				Graphics g = Graphics.FromImage(bmp);
-
+		
 				if (day.study.Count != 0 && day.study.Count < 3)
 				{
 					int rn1 = RandomNum1();
 					int rn2 = RandomNum1();
 					int n3 = day.study.Count;
-					Image img_study = Image.FromFile(@"C:\Users\hyes\documents\visual studio 2010\Projects\calendar_02\calendar_02\Resources\study1.jpg");
 					label.Image = bmp;
 					Rectangle tem3 = new Rectangle(rn1, rn2, 20 * n3, 20 * n3);
-					g.DrawImage(img_study, tem3);
+					g.DrawImage(images[3], tem3);
 				}
 
 				else if (day.study.Count >= 3 && day.study.Count <= 6)
@@ -136,38 +142,34 @@ namespace calendar_02
 					int rn1 = RandomNum1();
 					int rn2 = RandomNum1();
 					int n3 = day.study.Count;
-					Image img_study = Image.FromFile(@"C:\Users\hyes\Documents\Visual Studio 2010\Projects\calendar_02\calendar_02\Resources\study2.png");
 					label.Image = bmp;
 					Rectangle tem3 = new Rectangle(rn1, rn2, 15 * n3, 15 * n3);
-					g.DrawImage(img_study, tem3);
+					g.DrawImage(images[3], tem3);
 				}
 
 				else if (day.study.Count > 6)
 				{
-					Image img_study = Image.FromFile(@"C:\Users\hyes\documents\visual studio 2010\Projects\calendar_02\calendar_02\Resources\study2.png");
 					label.Image = bmp;
 					Rectangle tem3 = new Rectangle(5, 5, 90, 90);
-					g.DrawImage(img_study, tem3);
+					g.DrawImage(images[3], tem3);
 				}
 
 				if (day.Coffee.Count != 0 && day.Coffee.Count < 4)
 				{
-					Image img_cof = Image.FromFile(@"C:\Users\hyes\Documents\Visual Studio 2010\Projects\calendar_02\calendar_02\Resources\coffee1.png");
 					int rn1 = RandomNum();
 					int rn2 = RandomNum();
 					int n = day.Coffee.Count;
 					label.Image = bmp;
 					Rectangle tem = new Rectangle(rn1, rn2, n * 18, n * 15);
-					g.DrawImage(img_cof, tem);
+					g.DrawImage(images[0], tem);
 				}
 
 
 				else if (day.Coffee.Count >= 4)
 				{
-					Image img_cof = Image.FromFile(@"C:\Users\hyes\Documents\Visual Studio 2010\Projects\calendar_02\calendar_02\Resources\coffee1.png");
 					label.Image = bmp;
 					Rectangle tem = new Rectangle(5, 12, 84, 70);
-					g.DrawImage(img_cof, tem);
+					g.DrawImage(images[0], tem);
 				}
 
 				if (day.Exercise.Count != 0 && day.Exercise.Count < 3)
@@ -175,19 +177,17 @@ namespace calendar_02
 					int rn1 = RandomNum();
 					int rn2 = RandomNum();
 					int n1 = day.Exercise.Count;
-					Image img_exer = Image.FromFile(@"C:\Users\hyes\Documents\Visual Studio 2010\Projects\calendar_02\calendar_02\Resources\tennis2.png");
 					label.Image = bmp;
 					Rectangle tem1 = new Rectangle(rn1, rn2, 25 * n1, 25 * n1);
-					g.DrawImage(img_exer, tem1);
+					g.DrawImage(images[4], tem1);
 				}
 
 				else if (day.Exercise.Count >= 3)
 				{
 					int n2 = day.Exercise.Count;
-					Image img_exer = Image.FromFile(@"C:\Users\hyes\Documents\Visual Studio 2010\Projects\calendar_02\calendar_02\Resources\tennis2.png");
 					label.Image = bmp;
 					Rectangle tem1 = new Rectangle(35, 10, 80, 80);
-					g.DrawImage(img_exer, tem1);
+					g.DrawImage(images[4], tem1);
 
 				}
 
@@ -196,18 +196,16 @@ namespace calendar_02
 					int rn1 = RandomNum();
 					int rn2 = RandomNum();
 					int n2 = day.meditation.Count;
-					Image img_medi = Image.FromFile(@"C:\Users\hyes\Documents\Visual Studio 2010\Projects\calendar_02\calendar_02\Resources\meditation2.png");
 					label.Image = bmp;
 					Rectangle tem2 = new Rectangle(rn1, rn2, 15 * n2, 15 * n2);
-					g.DrawImage(img_medi, tem2);
+					g.DrawImage(images[1], tem2);
 				}
 
 				else if (day.meditation.Count >= 3)
 				{
-					Image img_medi = Image.FromFile(@"C:\Users\hyes\Documents\Visual Studio 2010\Projects\calendar_02\calendar_02\Resources\meditation2.png");
 					label.Image = bmp;
 					Rectangle tem2 = new Rectangle(20, 30, 80, 80);
-					g.DrawImage(img_medi, tem2);
+					g.DrawImage(images[1], tem2);
 				}
 
 
